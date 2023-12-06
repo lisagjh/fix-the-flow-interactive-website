@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="./scripts/script.js" defer></script>
+    <title>Leeslijst - Mijn OBA</title>
+</head>
+
+<body>
+    <header>
+
+        <img src="./assets/logo/OBA logo wit kopie klein.png" alt="Oba Logo" width="64" height="32">
+        <!-- <img src="./assets/logo/OBA_zwart_rgb.png" alt="Oba Logo" width="64" height="32"> -->
+
+        <!-- Gebruikte tutorial: https://www.w3schools.com/howto/howto_js_dropdown.asp -->
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Menu</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="leeslijst-container">
+            <h1>Leeslijst</h1>
+
+            <section class="filters">
+                <form>
+                    <!-- icon toevoegen -->
+                    <input type="text" placeholder="zoek in leeslijst">
+                </form>
+
+                <div class="buttons">
+                    <button>Filters</button>
+                    <button>A-Z</button>
+                    <button>x verwijder alle filters</button>
+                </div>
+            </section>
+
+            <section class="leeslijst">
+
+                <div class="book-card">
+                    <img src="assets/boeken/boek1.jpg" alt="boek cover" width="120px">
+                    <div class="book-info">
+                        <h2>titel</h2>
+                        <div class="genre">roman</div>
+                        <ul>
+                            <li>Lucinda Riley</li>
+                            <li>Jaar Uitgave</li>
+                            <li>Extra info</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <div class="book-card">
+                    <img src="assets/boeken/boek1.jpg" alt="boek cover" width="100px">
+                    <div class="book-info">
+                        <h2>titel</h2>
+                        <div class="genre">roman</div>
+                        <ul>
+                            <li>Lucinda Riley</li>
+                            <li>Jaar Uitgave</li>
+                            <li>Extra info</li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- <div class="book-card">
+                    <img src="assets/boeken/boek1.jpg" alt="boek cover" width="100px">
+                    <div class="book-info">
+                        <h2>titel</h2>
+                        <div class="genre">roman</div>
+                        <ul>
+                            <li>Lucinda Riley</li>
+                            <li>Jaar Uitgave</li>
+                            <li>Extra info</li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- <div class="book-card">
+                    <img src="assets/boeken/boek1.jpg" alt="boek cover" width="100px">
+                    <div class="book-info">
+                        <h2>titel</h2>
+                        <div class="genre">roman</div>
+                        <ul>
+                            <li>Lucinda Riley</li>
+                            <li>Jaar Uitgave</li>
+                            <li>Extra info</li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- <div class="book-card">
+                    <img src="assets/boeken/boek1.jpg" alt="boek cover" width="100px">
+                    <div class="book-info">
+                        <h2>titel</h2>
+                        <div class="genre">roman</div>
+                        <ul>
+                            <li>Lucinda Riley</li>
+                            <li>Jaar Uitgave</li>
+                            <li>Extra info</li>
+                        </ul>
+                    </div>
+                </div> -->
+
+
+            </section>
+
+        </div>
+
+
+    </main>
+
+</body>
+
+</html>

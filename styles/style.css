@@ -1,0 +1,255 @@
+@font-face {
+  font-family: AvenirRoman;
+  src: url(/font/Avenir-roman.ttf);
+}
+
+@font-face {
+  font-family: AvenirMedium;
+  src: url(/font/Avenir-medium.ttf);
+}
+
+@font-face {
+  font-family: AvenirBlack;
+  src: url(/font/Avenir\ -black.ttf);
+}
+
+:root {
+  --accent-color: #ec0201;
+  --primary-color: #fff;
+  --secondary-color: #000;
+  --tertiary-color: #969696;
+  --extra-color: #f9f9f9;
+
+  --accent-color-one: #93256c;
+  --accent-color-two: #df5429;
+  --accent-color-three: #2a9077;
+  --accent-color-four: #1a63a1;
+  --accent-color-five: #ed9f2d;
+  --accent-color-six: #d9146b;
+  --accent-color-seven: #2c8ec2;
+  --accent-color-eight: #54a144;
+
+  --spacing-regular: 0.8rem;
+  --spacing-half: 0.4rem;
+  --spacing-small: 0.2rem;
+  --spacing-big: 1.6rem;
+  --spacing-extra: 3rem;
+
+  --heading-one: 3em;
+  --heading-two: 1.75em;
+  --heading-three: 1.5em;
+
+  --big-font: "AvenirBlack", Arial, Helvetica, sans-serif;
+  --regular-font: "AvenirMedium", Arial, Helvetica, sans-serif;
+  --roman-font: "AvenirRoman", Arial, Helvetica, sans-serif;
+
+  --font-size-regular: 1rem;
+  --font-size-big: 1.5rem;
+  --font-size-small: 0.85rem;
+
+  --border-one: 1px solid #969696;
+  --border-radius: 6px;
+}
+
+/*  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--regular-font);
+}
+
+body {
+  width: 100vw;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--regular-font);
+}
+
+/* * header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary-color);
+}
+
+header img {
+  scale: 1.2;
+  margin: var(--spacing-regular) var(--spacing-extra);
+}
+
+/* * Dropdown Menu */
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: var(--secondary-color);
+  /* background-color: transparent; */
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: var(--spacing-half) var(--spacing-regular);
+  margin: var(--spacing-half) var(--spacing-extra);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: var(--accent-color-two);
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: var(--secondary-color);
+  padding: var(--spacing-half) var(--spacing-regular);
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--extra-color);
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+/* * main */
+
+main {
+  width: 100vw;
+}
+
+.leeslijst-container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-regular);
+
+  h1 {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color-two);
+    text-decoration-thickness: 2px;
+  }
+}
+
+/** search bar */
+
+form {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-half) var(--spacing-regular);
+  margin: var(--spacing-small) 0px var(--spacing-half) 0px;
+  border: var(--border-one);
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+form i {
+  color: var(--secondary-color);
+  margin-right: var(--spacing-regular);
+  font-size: 1.5rem;
+}
+
+input {
+  font-family: var(--regular-font);
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+}
+
+/* searchbar & filter buttons */
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons button {
+  color: var(--secondary-color);
+  background-color: var(--extra-color);
+  padding: var(--spacing-small) var(--spacing-regular);
+  margin: var(--spacing-small);
+  border: none;
+  border-radius: var(--border-radius);
+}
+
+.buttons button:first-of-type {
+  background-color: var(--accent-color-one);
+  color: var(--primary-color);
+}
+
+.buttons button:nth-of-type(2) {
+  background-color: var(--accent-color-three);
+  color: var(--primary-color);
+}
+
+.buttons button:nth-of-type(3) {
+  background-color: var(--accent-color-two);
+  color: var(--primary-color);
+}
+
+/** boeken kaartje ? */
+
+.book-card {
+  display: flex;
+  flex-direction: row;
+  padding: var(--spacing-regular);
+  margin: var(--spacing-big) 0px var(--spacing-regular) 0px;
+  border: var(--border-one);
+  border-radius: var(--border-radius);
+}
+
+.book-card:hover {
+  img {
+    translate: 0% -5%;
+    box-shadow: -2px 2px 10px;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+  }
+}
+
+.book-info {
+  width: 100%;
+  padding: var(--spacing-half);
+
+  ul {
+    list-style: none;
+  }
+}
+
+.genre {
+  background-color: var(--accent-color-eight);
+  color: var(--primary-color);
+  font-size: 0.7rem;
+  text-align: center;
+  width: 2.5rem;
+  padding: var(--spacing-small);
+  border-radius: var(--border-radius);
+}
