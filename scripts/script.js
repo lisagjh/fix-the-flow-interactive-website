@@ -44,3 +44,4 @@ xmarkIcon.addEventListener('click', () => {
   searchInput.value = '';
   updateDisplay();
 });
+

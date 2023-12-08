@@ -81,19 +81,19 @@ header {
 
 header img {
   scale: 1.2;
-  margin: var(--spacing-regular) var(--spacing-extra);
+  margin: var(--spacing-regular) var(--spacing-big);
 }
 
 /* * Dropdown Menu */
 
 /* Dropdown Button */
 .dropbtn {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary);
   /* background-color: transparent; */
   color: var(--primary-color);
   font-size: 1rem;
   padding: var(--spacing-half) var(--spacing-regular);
-  margin: var(--spacing-half) var(--spacing-extra);
+  margin: var(--spacing-half) var(--spacing-big);
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -102,7 +102,7 @@ header img {
 /* Dropdown button on hover & focus */
 .dropbtn:hover,
 .dropbtn:focus {
-  background-color: var(--accent-color-two);
+  background-color: var(--accent-color-six);
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -191,6 +191,7 @@ input {
 .buttons {
   display: flex;
   flex-direction: row;
+  margin-bottom: var(--spacing-big);
 }
 
 .buttons button {
@@ -207,14 +208,30 @@ input {
   color: var(--primary-color);
 }
 
+.buttons button:first-of-type:hover {
+  --accent-color-one: #b92485;
+  background-color: var(--accent-color-one);
+}
+
 .buttons button:nth-of-type(2) {
   background-color: var(--accent-color-three);
   color: var(--primary-color);
 }
 
+.buttons button:nth-of-type(2):hover {
+  --accent-color-three: #30a689;
+  background-color: var(--accent-color-three);
+}
+
 .buttons button:nth-of-type(3) {
+  display: none;
   background-color: var(--accent-color-two);
   color: var(--primary-color);
+}
+
+.buttons button:nth-of-type(3):hover {
+  --accent-color-two: #ff541f;
+  background-color: var(--accent-color-two);
 }
 
 /** boeken kaartje ? */
@@ -226,27 +243,77 @@ input {
 }
 
 .book-card {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--primary-color);
-  margin: var(--spacing-half) 0px var(--spacing-regular) 0px;
+  display: grid;
+  grid-template-areas:
+    "cover info"
+    "button button";
+  min-width: 18.25rem;
+  width: 95%;
+  max-width: 25rem;
+  padding: var(--spacing-small);
+  margin: var(--spacing-half) 0px var(--spacing-big) 0px;
   border: var(--border-one);
   border-radius: var(--border-radius);
 
   img {
+    grid-area: cover;
     margin: var(--spacing-half);
-    border-radius: 2%;
+    border-radius: 0px 6px 6px 0px;
+    /* box-shadow: 1px 1px 4px; */
+    translate: 0% -15%;
   }
 
   .book-info {
-    padding-top: var(--spacing-regular);
+    grid-area: info;
+    padding-left: var(--spacing-small);
   }
 }
 
-.book-card:hover {
-  box-shadow: 3px 3px 1px;
+/* .book-info p:first-of-type {
+  font-weight: bolder;
+} */
+
+.bookBtn {
+  display: flex;
+  flex-direction: row;
+  grid-area: button;
+  justify-content: center;
+  gap: var(--spacing-half);
+  margin-bottom: var(--spacing-small);
 }
 
-.book-info p:first-of-type {
-  font-weight: bolder;
+.bookBtn button {
+  display: flex;
+  color: var(--primary-color);
+  background-color: var(--accent-color-eight);
+  font-size: rem;
+  align-items: center;
+  min-width: fit-content;
+  /* width: fit-content; */
+  height: 1.75rem;
+  padding: var(--spacing-small);
+  padding-right: var(--spacing-half);
+  border: none;
+  --border-radius: 1rem;
+  border-radius: var(--border-radius);
+
+  .icon {
+    font-size: 1.15rem;
+  }
+}
+
+.bookBtn button:first-of-type:hover {
+  --accent-color-eight: #52ae3f;
+  background-color: var(--accent-color-eight);
+}
+
+.bookBtn button:nth-of-type(2) {
+  display: flex;
+  background-color: var(--accent-color-two);
+  color: var(--primary-color);
+}
+
+.bookBtn button:nth-of-type(2):hover {
+  --accent-color-two: #ff4811;
+  background-color: var(--accent-color-two);
 }
