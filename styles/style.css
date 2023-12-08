@@ -18,7 +18,7 @@
   --primary-color: #fff;
   --secondary-color: #000;
   --tertiary-color: #969696;
-  --extra-color: #ececec;
+  --extra-color: #f1f1f1;
 
   --accent-color-one: #93256c;
   --accent-color-two: #df5429;
@@ -188,6 +188,77 @@ input {
   border: none;
 }
 
+/* filter button drodpown */
+
+.buttons .filterbtn {
+  background-color: var(--accent-color-one);
+  color: var(--primary-color);
+}
+
+.buttons .filterbtn:hover {
+  --accent-color-one: #b92485;
+  background-color: var(--accent-color-one);
+}
+
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 5;
+}
+
+.filter-content {
+  display: none;
+  position: absolute;
+  background-color: var(--extra-color);
+  width: 15rem;
+
+  padding: var(--spacing-half);
+
+  border: var(--border-one);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* voor javascript */
+.show {
+  display: block;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.genre-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-regular);
+  border-right: var(--border-one);
+}
+
+.other-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-regular);
+}
+
+.checkbox-wrap {
+  display: flex;
+  flex-direction: row;
+  padding: var(--spacing-small);
+
+  input:hover {
+    cursor: pointer;
+  }
+
+  label:hover {
+    cursor: pointer;
+  }
+}
+
 /* searchbar & filter buttons */
 
 .buttons {
@@ -205,33 +276,23 @@ input {
   border-radius: var(--border-radius);
 }
 
-.buttons button:first-of-type {
-  background-color: var(--accent-color-one);
-  color: var(--primary-color);
-}
-
-.buttons button:first-of-type:hover {
-  --accent-color-one: #b92485;
-  background-color: var(--accent-color-one);
-}
-
-.buttons button:nth-of-type(2) {
+.buttons .filterbtn-sort {
   background-color: var(--accent-color-three);
   color: var(--primary-color);
 }
 
-.buttons button:nth-of-type(2):hover {
+.buttons .filterbtn-sort:hover {
   --accent-color-three: #30a689;
   background-color: var(--accent-color-three);
 }
 
-.buttons button:nth-of-type(3) {
+.buttons .filterbtn-del {
   display: none;
   background-color: var(--accent-color-two);
   color: var(--primary-color);
 }
 
-.buttons button:nth-of-type(3):hover {
+.buttons .filterbtn-del:hover {
   --accent-color-two: #ff541f;
   background-color: var(--accent-color-two);
 }

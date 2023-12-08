@@ -6,17 +6,17 @@ function myFunction() {
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
+ if (!event.target.matches(".dropbtn")) {
+     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
+     for (i = 0; i < dropdowns.length; i++) {
+       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
+         openDropdown.classList.remove("show");
+       }
+     }
+   }
+ };
 
 
 // zoekfunctie
@@ -45,3 +45,32 @@ xmarkIcon.addEventListener('click', () => {
   updateDisplay();
 });
 
+// ! filter dropdown
+// objecten maken van de elementen
+const dropdown = document.querySelector(".filter-dropdown");
+
+const filterbtn = document.querySelector('.filterbtn');
+
+const filterContent = document.querySelector(".filter-content");
+
+// event toegevoegd aan de filter button, zodat er op de filter content een class met display block word getoggled
+filterbtn.addEventListener("click", function () {
+  console.log("click")
+  console.log(this)
+  filterContent.classList.toggle("show");
+});
+
+// zodat het menu sluit als er buiten word geklikt ?? 
+// opent nu ook de dropdown menu , sluit niet als je e rbuioten kllikt
+// window.onclick = function (event) {
+//   if (!event.target.matches(".filterbtn")) {
+//       var dropdowns = document.getElementsByClassName("filter-content");
+//      var i;
+//       for (i = 0; i < dropdowns.length; i++) {
+//         var openDropdown = dropdowns[i];
+//        if (openDropdown.classList.contains("show")) {
+//           openDropdown.classList.remove("show");
+//         }
+//       }
+//     }
+//   };
