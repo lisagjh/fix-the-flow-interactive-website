@@ -167,7 +167,9 @@ form {
   margin: var(--spacing-small) 0px var(--spacing-half) 0px;
   border: var(--border-one);
   border-radius: var(--border-radius);
+  height: 2rem;
   width: 100%;
+  max-width: 20rem;
 }
 
 form i {

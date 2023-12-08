@@ -33,19 +33,23 @@
             <h1>Leeslijst</h1>
 
             <section class="leeslijst">
-                <form>
-                    <!-- https://www.w3schools.com/howto/howto_js_filter_lists.asp -->
-                    <!-- icon toevoegen -->
-                    <input type="text" id="searchInput" onkeyup="myfunction()" placeholder="Zoek in leeslijst">
-                    <img src="./assets/search.svg" id="searchIcon" alt="zoek icoon">
-                    <img src="./assets/x.svg" id="closeIcon" alt="sluit zoekschemr">
-                </form>
 
-                <div class="buttons">
-                    <button class="filterBtn">Filters</button>
-                    <button>A-Z</button>
-                    <button>x verwijder alle filters</button>
-                </div>
+                <section class="top-leeslijst">
+                    <form>
+                        <!-- https://www.w3schools.com/howto/howto_js_filter_lists.asp -->
+                        <input type="text" id="searchInput" onkeyup="myfunction()" placeholder="Zoek in leeslijst">
+                        <img src="./assets/search.svg" id="searchIcon" alt="zoek icoon">
+                        <img src="./assets/x.svg" id="closeIcon" alt="sluit zoekschemr">
+                    </form>
+
+                    <div class="buttons">
+                        <button class="filterBtn">Filters</button>
+                        <button>A-Z</button>
+                        <button>x verwijder alle filters</button>
+                    </div>
+                </section>
+
+
                 <ul id="list">
 
                     <li class="book-card">
